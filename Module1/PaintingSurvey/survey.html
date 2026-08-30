@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Miniature Painting Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Miniature Painting Survey</h1>
+    <p>Tell us about your miniature painting preferences.</p>
+
+    <form id="surveyForm" onsubmit="submitSurvey(event)">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+
+    <label for="army">What army do you primarily paint?</label>
+    <select id="army" name="army">
+        <option value="">Select an army</option>
+        <option value="Space Marines">Space Marines</option>
+        <option value="Chaos">Chaos</option>
+        <option value="Orks">Orks</option>
+        <option value="Tyranids">Tyranids</option>
+        <option value="Necrons">Necrons</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <br><br>
+
+    <label>How would you rate your painting experience?</label>
+    <br>
+
+    <input type="radio" id="beginner" name="experience" value="Beginner">
+    <label for="beginner">Beginner</label>
+    <br>
+
+    <input type="radio" id="intermediate" name="experience" value="Intermediate">
+    <label for="intermediate">Intermediate</label>
+    <br>
+
+    <input type="radio" id="advanced" name="experience" value="Advanced">
+    <label for="advanced">Advanced</label>
+
+    <br><br>
+
+    <label>What painting techniques do you use?</label>
+    <br>
+
+    <input type="checkbox" id="drybrushing" name="techniques" value="Drybrushing">
+    <label for="drybrushing">Drybrushing</label>
+    <br>
+
+    <input type="checkbox" id="airbrushing" name="techniques" value="Airbrushing">
+    <label for="airbrushing">Airbrushing</label>
+    <br>
+
+    <input type="checkbox" id="layering" name="techniques" value="Layering">
+    <label for="layering">Layering</label>
+    <br>
+
+    <input type="checkbox" id="washing" name="techniques" value="Washing">
+    <label for="washing">Washing</label>
+
+    <br><br>
+
+    <label for="comments">What would you like to improve about your miniature painting?</label>
+    <br>
+    <textarea id="comments" name="comments" rows="5" cols="80"></textarea>
+
+    <br><br>
+
+    <button type="submit">Submit Survey</button>
+
+    </form>
+
+    <script>
+        function submitSurvey(event) {
+            event.preventDefault();
+
+            let form = event.target;
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            let name = document.getElementById("name").value;
+
+            alert("Survey received! Thanks " + name + "!");
+
+            form.reset();
+        }
+    </script>
+
+
+</body>
+</html>

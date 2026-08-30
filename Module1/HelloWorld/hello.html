@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Hello!</h1>
+
+<label for="firstName">What's your first name?</label>
+<input type="text" id="firstName">
+<br><br>
+
+<label for="lastName">What's your last name?</label>
+<input type="text" id="lastName">
+<br><br>
+
+<button onclick="welcomeUser()">Press me</button>
+<p id="welcome"></p>
+
+
+<script>
+    function welcomeUser() {
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        document.getElementById("welcome").innerHTML =
+            "Welcome " + firstName + " " + lastName + "!";
+    }
+</script>
+
+</body>
+</html>

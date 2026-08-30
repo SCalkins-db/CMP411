@@ -1,0 +1,77 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #008000;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    color: #008000;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Highlight required fields red when they are empty or invalid */
+input:required:invalid {
+    border: 2px solid #ff0000;
+}
+
+/* Return required fields to a normal border when valid */
+input:required:valid {
+    border: 1px solid #aaaaaa;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0000;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
