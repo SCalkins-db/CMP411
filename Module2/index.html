@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 Flexbox Exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function getLocation() {
+        const locationText = document.getElementById("location");
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            locationText.innerHTML =
+                "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        document.getElementById("location").innerHTML =
+            "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
+<body>
+
+    <h1>Module 2 Flexbox Exercise</h1>
+
+    <div class="flex-container">
+
+        <div class="flex-item">
+            <h2>
+                <a href="https://www.warhammer.com/en-GB/build-and-paint-lp">
+                    Visit Citadel Colour
+                </a>
+            </h2>
+        </div>
+
+        <div class="flex-item">
+            <h2>Image</h2>
+            <img src="CitCol.jpg" alt="Citadel Colour miniature paints">
+        </div>
+
+        <div class="flex-item">
+            <h2>Painting Video</h2>
+
+            <iframe
+                src="https://www.youtube.com/embed/bsfQgbx3nNc?si=DWC6GGbuEu1JGI4Q"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="flex-item">
+            <h2>Geolocation</h2>
+            <button onclick="getLocation()">Get My Location</button>
+            <p id="location"></p>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
