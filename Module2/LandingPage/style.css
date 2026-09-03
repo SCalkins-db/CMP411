@@ -1,0 +1,227 @@
+/* Page */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Top Bar */
+
+header {
+    background-color: #111111;
+    color: white;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.nav-area {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-area a {
+    color: white;
+}
+
+
+/* Main Content */
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.content-area {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* Paint Cards */
+
+.paint-card {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.base-card {
+    background-color: #d71920;
+}
+
+.layer-card {
+    background-color: #5689c7;
+}
+
+.shade-card {
+    background-color: #80c41c;
+}
+
+.technical-card {
+    background-color: #b9bdc0;
+}
+
+
+/* Paint Bottles */
+
+.bottle {
+    position: relative;
+    width: 80%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+}
+
+.bottle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bottle-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    -webkit-mask-image: url("fill_mask.png");
+    mask-image: url("fill_mask.png");
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+
+/* Bottle Colors */
+
+.base-card .bottle-color {
+    background: linear-gradient(
+        90deg,
+        #5c080b 0%,
+        #8d1117 20%,
+        #c52a30 45%,
+        #e45155 55%,
+        #a71920 75%,
+        #5c080b 100%
+    );
+}
+
+.layer-card .bottle-color {
+    background: linear-gradient(
+        90deg,
+        #173f70 0%,
+        #245fa8 20%,
+        #4b8bd3 45%,
+        #79ace4 55%,
+        #2866ad 75%,
+        #173f70 100%
+    );
+}
+
+.shade-card .bottle-color {
+    background: linear-gradient(
+        90deg,
+        #293716 0%,
+        #4c6528 20%,
+        #718d3c 45%,
+        #91aa55 55%,
+        #50682b 75%,
+        #293716 100%
+    );
+}
+
+.technical-card .bottle-color {
+    background: linear-gradient(
+        90deg,
+        #67491f 0%,
+        #946b31 20%,
+        #c0944e 45%,
+        #ddb86f 55%,
+        #9d7338 75%,
+        #67491f 100%
+    );
+}
+
+
+/* Bottom Bar */
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    color: white;
+    padding: 20px;
+}
+
+.bottom-bar a {
+    color: white;
+}
+
+.about-area,
+.store-area {
+    flex: 1;
+}
+
+
+/* Medium Screen */
+
+@media (max-width: 900px) {
+
+    .content-area {
+        flex-wrap: wrap;
+    }
+
+    .paint-card {
+        flex: 0 0 calc(50% - 8px);
+    }
+}
+
+
+/* Small Screen */
+
+@media (max-width: 700px) {
+
+    .top-bar,
+    .nav-area,
+    .content-area,
+    .bottom-bar {
+        flex-direction: column;
+    }
+
+    .paint-card {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
