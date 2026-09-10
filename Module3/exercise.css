@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+}
+
+.column {
+    flex: 1;
+}
+
+input {
+    margin: 5px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}
