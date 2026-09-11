@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacon Ipsum API Consumer</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+
+<body>
+
+<h1>Bacon Ipsum API Consumer</h1>
+
+<div class="container">
+
+    <div class="input-section">
+        <h2>Get Bacon Ipsum</h2>
+
+        <form id="baconForm">
+            <label for="paragraphs">Number of paragraphs:</label>
+
+            <select id="paragraphs">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <button type="submit">Get Bacon Ipsum</button>
+        </form>
+    </div>
+
+    <div class="raw-section">
+        <h2>Raw JSON</h2>
+        <pre id="rawJson"></pre>
+    </div>
+
+    <div class="formatted-section">
+        <h2>Formatted Paragraphs</h2>
+        <div id="formattedText"></div>
+    </div>
+
+</div>
+
+    <script src="exercise.js"></script>
+
+</body>
+</html>
