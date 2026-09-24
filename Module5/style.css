@@ -1,0 +1,22 @@
+body {
+    background-color: #f4f6f8;
+}
+
+.container {
+    max-width: 800px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#weatherResult {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#weatherResult:empty {
+    display: none;
+}
