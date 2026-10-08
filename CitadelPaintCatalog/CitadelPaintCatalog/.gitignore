@@ -1,0 +1,33 @@
+
+# .NET build files
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# Node.js dependencies
+**/node_modules/
+
+# TypeScript generated files in src
+**/src/*.js
+**/src/*.js.map
+**/src/*.d.ts
+**/src/*.d.ts.map
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.backup.js
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

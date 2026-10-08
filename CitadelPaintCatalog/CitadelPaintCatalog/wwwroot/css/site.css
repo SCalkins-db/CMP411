@@ -1,0 +1,153 @@
+﻿
+/* Keep element sizing consistent */
+* {
+    box-sizing: border-box;
+}
+
+/* Main page styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #202938;
+}
+
+/* Center the page content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* Page heading */
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.page-header p {
+    margin: 0;
+    color: #586579;
+}
+
+/* Search and filter layout */
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c7cfda;
+    border-radius: 8px;
+    background: white;
+    color: #202938;
+    font-size: 1rem;
+}
+
+/* Highlight controls when using keyboard navigation */
+.filter-group input:focus-visible,
+.filter-group select:focus-visible,
+.paint-link:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* Number of matching paints */
+.result-count {
+    color: #586579;
+    margin-bottom: 16px;
+}
+
+/* Display paints in two columns */
+.paint-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Individual paint cards */
+.paint-card {
+    background: white;
+    border: 1px solid #e0e5ed;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Paint color preview */
+.paint-swatch {
+    height: 90px;
+    background: #ddd;
+    border-bottom: 1px solid #e0e5ed;
+}
+
+/* Paint information */
+.paint-details {
+    padding: 16px;
+}
+
+.paint-details h2 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+}
+
+.paint-type {
+    color: #586579;
+    margin: 0 0 12px;
+}
+
+.paint-code {
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+/* Link to the paint product page */
+.paint-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #174ea6;
+    font-weight: 600;
+}
+
+/* Message when no paints match */
+.empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #586579;
+}
+
+/* Stack filters and cards on smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 14px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .filters,
+    .paint-grid {
+        grid-template-columns: 1fr;
+    }
+}

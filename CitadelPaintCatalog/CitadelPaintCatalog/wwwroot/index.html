@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citadel Air Paint Catalog</title>
+
+    <!-- Load the stylesheet and JavaScript -->
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/js/site.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <!-- Page title -->
+        <header class="page-header">
+            <h1>Citadel Air Paint Catalog</h1>
+            <p>Explore the Citadel Air paint collection.</p>
+        </header>
+
+        <!-- Search and filter controls -->
+        <section class="filters" aria-label="Paint filters">
+            <div class="filter-group">
+                <label for="searchInput">Search Paint</label>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search by paint name..."
+                >
+            </div>
+
+            <div class="filter-group">
+                <label for="typeFilter">Paint Type</label>
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Show the number of matching paints -->
+        <p id="resultCount" class="result-count"
+           role="status" aria-live="polite">
+            Loading paints...
+        </p>
+
+        <!-- Paint cards are added here by JavaScript -->
+        <section id="paintGrid" class="paint-grid"
+                 aria-label="Paint catalog">
+        </section>
+    </main>
+
+</body>
+</html>
